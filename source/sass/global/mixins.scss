@@ -1,0 +1,32 @@
+@mixin offset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin heading-style {
+  @include offset();
+
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: $basic-dark;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
