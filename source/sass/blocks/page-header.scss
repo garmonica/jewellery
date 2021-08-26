@@ -1,0 +1,43 @@
+.page-header__slogan {
+  @include offset;
+  padding: 45px;
+  background: $dark-brown url("../img/bg-header.jpg") no-repeat center / cover;
+  min-height: 463px;
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  color: $basic-white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: $mobile-width) {
+    padding: 15px;
+  }
+
+  dt {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media (max-width: $mobile-width) {
+      font-size: 38px;
+      line-height: 44px;
+    }
+  }
+
+  dd {
+    @include offset;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 43px;
+
+    @media (max-width: $mobile-width) {
+      font-size: 34px;
+      line-height: 36px;
+    }
+  }
+}
