@@ -171,6 +171,7 @@
 }
 
 .menu__search {
+  margin-right: 70px;
   flex-grow: 1;
   max-width: 300px;
   position: relative;
@@ -182,6 +183,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin-right: 0;
     margin-top: 34px;
     order: initial;
     width: 100%;

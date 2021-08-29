@@ -1,0 +1,58 @@
+.subscription {
+  h2 {
+    @include offset;
+    font-family: "Cormorant Garamond", "Garamond", serif;
+    text-align: left;
+    margin: 3px 0 10px;
+    font-size: 32px;
+    line-height: 44px;
+    color: $basic-white;
+    letter-spacing: 0.05em;
+
+    @media (max-width: $mobile-width) {
+      margin: 15px 0 13px;
+    }
+  }
+
+  p {
+    @include offset;
+    margin-bottom: 35px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $dark-grey;
+  }
+}
+
+.subscription__wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $basic-white;
+
+  input {
+    flex-grow: 1;
+    font-family: inherit;
+    padding: 11px 0;
+    color: inherit;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  input::placeholder {
+    color: $dark-grey;
+  }
+
+  button {
+    padding: 10px 0 10px 10px;
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 16px;
+  }
+
+  svg {
+    margin-left: 8px;
+  }
+}

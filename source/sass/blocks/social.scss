@@ -1,0 +1,41 @@
+.social {
+  a {
+    padding-left: 32px;
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+      padding: 10px 30px 10px 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.social__icon {
+  position: absolute;
+  left: 2px;
+  top: 12px;
+
+  &--facebook {
+    left: 6px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    position: static;
+    height: 21px;
+    width: auto;
+
+    &--twitter {
+      height: 18px;
+    }
+  }
+}
