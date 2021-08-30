@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <meta name="description" content="CH Jewellery - our jewellerry is made of solid gold, silver or leather.
     Also, some jewellery contains precious and semiprecious stones and crystals.">
   <title>CH Jewellery - Main Page</title>
@@ -87,44 +88,91 @@
 
   </header>
 
-  <main>
+  <main class="container">
     <h1 class="visually-hidden">CH Jewellery main page</h1>
 
-    <section class="new-items">
+    <section class="slider">
       <h2>New In</h2>
-      <a href="catalog.html">Shop Now</a>
-      <div>
-        <button aria-label="to previous slides"></button>
-        <button aria-label="to next slides"></button>
+      <a href="#">Shop Now</a>
+      <button class="slider__button slider__button--prev swiper-button-custom-prev" aria-label="to previous slides">
+        <svg class="slider__arrow" width="30" height="11">
+          <use xlink:href="img/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+      <button class="slider__button slider__button--next swiper-button-custom-next" aria-label="to next slides">
+        <svg class="slider__arrow" width="30" height="11">
+          <use xlink:href="img/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
 
-        <ul>
-          <li>
-            <img width="100" src="img/new-items/new-item-1.jpg" alt="Purple amethyst on silver chain">
+      <div class="swiper">
+        <ul class="slider__list swiper-wrapper">
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-1.jpg" alt="Purple amethyst on silver chain">
             <h3>Necklace with amethyst</h3>
             <p>$ 145</p>
           </li>
-          <li>
-            <img width="100" src="img/new-items/new-item-2.jpg" alt="Black choker with a triangle pendant">
-            <h3>Layered сhoker</h3>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-2.jpg" alt="Black choker with a triangle pendant">
+            <h3>Layered choker</h3>
             <p>$ 115</p>
           </li>
-          <li>
-            <img width="100" src="img/new-items/new-item-3.jpg" alt="Layered gold chain with two pendants">
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-3.jpg" alt="Layered gold chain with two pendants">
             <h3>Gold chain</h3>
             <p>$ 215</p>
           </li>
-          <li>
-            <img width="100" src="img/new-items/new-item-4.jpg" alt="Silver earrings with blue and purple gemstones">
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-4.jpg"
+              alt="Silver earrings with blue and purple gemstones">
+            <h3>Galaxy earrings</h3>
+            <p>$ 95</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-1.jpg" alt="Purple amethyst on silver chain">
+            <h3>Necklace with amethyst</h3>
+            <p>$ 145</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-2.jpg" alt="Black choker with a triangle pendant">
+            <h3>Layered choker</h3>
+            <p>$ 115</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-3.jpg" alt="Layered gold chain with two pendants">
+            <h3>Gold chain</h3>
+            <p>$ 215</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-4.jpg"
+              alt="Silver earrings with blue and purple gemstones">
+            <h3>Galaxy earrings</h3>
+            <p>$ 95</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-1.jpg" alt="Purple amethyst on silver chain">
+            <h3>Necklace with amethyst</h3>
+            <p>$ 145</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-2.jpg" alt="Black choker with a triangle pendant">
+            <h3>Layered choker</h3>
+            <p>$ 115</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-3.jpg" alt="Layered gold chain with two pendants">
+            <h3>Gold chain</h3>
+            <p>$ 215</p>
+          </li>
+          <li class="slider__item swiper-slide">
+            <img width="100" height="284" src="img/new-items/new-item-4.jpg"
+              alt="Silver earrings with blue and purple gemstones">
             <h3>Galaxy earrings</h3>
             <p>$ 95</p>
           </li>
         </ul>
 
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
+        <div class="slider__pagination swiper-pagination"></div>
       </div>
     </section>
 
@@ -168,17 +216,16 @@
         </li>
         <li>
           <button>Which countries do you deliver to?</button>
-          <p></p>
+          <p>Belgium, Denmark, Finland, Ireland, Italy, Luxembourg, Netherlands, Portugal, Sweden</p>
         </li>
         <li>
           <button>What are the payment methods?</button>
-          <p>Our jewellerry is made of solid gold, silver or leather.
-            Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>Visa, Mastercard, American Express, iDeal, Sofot</p>
         </li>
         <li>
           <button>Can I return the jewellery if it didn’t fit me?</button>
-          <p>Our jewellerry is made of solid gold, silver or leather.
-            Also, some jewellery contains precious and semiprecious stones and crystals.</p>
+          <p>If for any reason you're not completely satisfied with your jewelry purchase, you can return it to us
+            within 90 days of receiving your purchase.</p>
         </li>
       </ul>
     </section>

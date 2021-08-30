@@ -4,6 +4,7 @@
   font-size: 14px;
   line-height: 21px;
   color: $basic-dark;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     background: $basic-brown;
@@ -254,7 +255,6 @@
     width: 100vw;
     height: 1px;
     background: $light-grey;
-    margin: 0 auto;
   }
 
   @media (max-width: $tablet-width) {
