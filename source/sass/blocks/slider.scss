@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 120px;
   text-align: center;
+  z-index: $zindex-slider;
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;

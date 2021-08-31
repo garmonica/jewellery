@@ -1106,7 +1106,8 @@ a {
 .slider {
   position: relative;
   padding-top: 120px;
-  text-align: center; }
+  text-align: center;
+  z-index: 70; }
   @media (max-width: 1023px) {
     .slider {
       padding-top: 70px; } }
