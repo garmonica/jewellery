@@ -18,16 +18,6 @@
   color: $basic-dark;
   letter-spacing: 0.03em;
   text-align: center;
-
-  @media (max-width: $tablet-width) {
-    font-size: 32px;
-    line-height: 45px;
-  }
-
-  @media (max-width: $mobile-width) {
-    font-size: 28px;
-    line-height: 39px;
-  }
 }
 
 @mixin link-style {

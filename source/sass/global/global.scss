@@ -16,12 +16,15 @@ html {
 body {
   min-width: 320px;
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   background-color: $basic-white;
   color: $basic-dark;
+}
+
+.page-main {
+  flex-grow: 1;
 }
 
 img {
