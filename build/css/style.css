@@ -1098,7 +1098,8 @@ a {
 .slider {
   position: relative;
   padding-top: 120px;
-  text-align: center; }
+  text-align: center;
+  width: 200px; }
   .slider h2 {
     margin: 0;
     padding: 0;
@@ -1132,7 +1133,7 @@ a {
     .slider a::after {
       content: "";
       position: absolute;
-      bottom: -10px;
+      bottom: -5px;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -1198,6 +1199,174 @@ a {
   margin: 0;
   padding: 0;
   font-weight: 700; }
+
+.blog {
+  padding-top: 109px;
+  text-align: center; }
+
+.blog__heading {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: #1d1613;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 19px; }
+  @media (max-width: 1023px) {
+    .blog__heading {
+      font-size: 32px;
+      line-height: 45px; } }
+  @media (max-width: 767px) {
+    .blog__heading {
+      font-size: 28px;
+      line-height: 39px; } }
+
+.blog__read-all {
+  color: #1d1613;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  margin-bottom: 65px; }
+  .blog__read-all::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 1px;
+    background: #a87b62; }
+
+.blog__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 1023px) {
+    .blog__wrapper {
+      display: block; } }
+
+.blog__left-column {
+  width: 50%;
+  margin-right: 30px; }
+  @media (max-width: 1023px) {
+    .blog__left-column {
+      width: auto;
+      margin-right: 0; } }
+
+.blog__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px; }
+  @media (max-width: 1023px) {
+    .blog__article {
+      margin-bottom: 50px; } }
+  @media (max-width: 767px) {
+    .blog__article {
+      display: block; } }
+  .blog__article:nth-child(even) .blog__img-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+  .blog__article a {
+    color: #1d1613;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: baseline;
+    position: relative; }
+    .blog__article a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 100%;
+      height: 1px;
+      background: #a87b62; }
+  .blog__article time {
+    font-size: 14px;
+    line-height: 18px;
+    color: #9b9997;
+    display: block;
+    margin-bottom: 14px; }
+  .blog__article h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 37px;
+    font-family: "Cormorant Garamond", "Garamond", serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+    color: #000000; }
+
+.blog__content {
+  min-width: 285px;
+  width: 50%;
+  min-height: 300px;
+  padding: 68px 60px;
+  background: #f0eae4;
+  text-align: center; }
+  @media (max-width: 1023px) {
+    .blog__content {
+      min-width: 339px;
+      width: 50%;
+      padding: 68px 85px; } }
+  @media (max-width: 767px) {
+    .blog__content {
+      min-width: auto;
+      width: 100%;
+      padding: 50px 60px; } }
+
+.blog__img-wrapper {
+  position: relative;
+  width: 50%; }
+  @media (max-width: 767px) {
+    .blog__img-wrapper {
+      width: 100%;
+      min-height: 256px; } }
+  .blog__img-wrapper img {
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    width: 100%; }
+
+.blog__article--main {
+  position: relative;
+  width: 50%; }
+  @media (max-width: 1023px) {
+    .blog__article--main {
+      width: auto; } }
+  .blog__article--main .blog__img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .blog__article--main .blog__content {
+    z-index: 80;
+    margin-top: auto;
+    margin-left: auto; }
 
 .page-footer {
   padding-top: 86px;
