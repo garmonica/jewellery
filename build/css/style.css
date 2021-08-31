@@ -581,7 +581,8 @@ a {
   font-size: 14px;
   line-height: 21px;
   color: #1d1613;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 80; }
   @media (max-width: 1023px) {
     .menu {
       background: #a87b62; } }
@@ -1394,7 +1395,7 @@ a {
     top: 0;
     left: 0; }
   .blog__article--main .blog__content {
-    z-index: 80;
+    z-index: 70;
     margin-top: auto;
     margin-left: auto; }
 

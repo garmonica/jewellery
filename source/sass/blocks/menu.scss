@@ -5,6 +5,7 @@
   line-height: 21px;
   color: $basic-dark;
   overflow: hidden;
+  z-index: $zindex-menu;
 
   @media (max-width: $tablet-width) {
     background: $basic-brown;
