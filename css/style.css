@@ -1177,7 +1177,7 @@ a {
   @media (max-width: 1023px) {
     .slider__pagination {
       margin-top: 33px; } }
-  @media (max-width: 1023px) {
+  @media (max-width: 767px) {
     .slider__pagination {
       margin-top: 30px;
       font-size: 16px;
@@ -1193,6 +1193,9 @@ a {
   @media (max-width: 1023px) {
     .slider__button {
       top: 99px; } }
+  @media (max-width: 767px) {
+    .slider__button {
+      display: none; } }
 
 @media (max-width: 1023px) {
   .slider__arrow {
