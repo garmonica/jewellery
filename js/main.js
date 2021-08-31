@@ -1,6 +1,4 @@
 /* global Swiper:readonly */
-import './vendor.js';
-
 const menu = document.querySelector('.menu');
 
 if (menu) {
@@ -26,41 +24,45 @@ if (menu) {
   });
 }
 
-new Swiper('.swiper', {
-  mousewheel: true,
-  loop: true,
-  spaceBetween: 30,
-  navigation: {
-    prevEl: '.swiper-button-custom-prev',
-    nextEl: '.swiper-button-custom-next',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<span class="${className}">${index + 1}</span>`;
+const slider = document.querySelector('.swiper');
+
+if (slider) {
+  new Swiper(slider, {
+    mousewheel: true,
+    loop: true,
+    spaceBetween: 30,
+    navigation: {
+      prevEl: '.swiper-button-custom-prev',
+      nextEl: '.swiper-button-custom-next',
     },
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<span class="${className}">${index + 1}</span>`;
+      },
     },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    320: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-          return `${current} of ${total}`;
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      320: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'custom',
+          renderCustom: function (swiper, current, total) {
+            return `${current} of ${total}`;
+          },
         },
       },
     },
-  },
-});
+  });
+}
