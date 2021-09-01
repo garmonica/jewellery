@@ -1,4 +1,5 @@
 @import "node_modules/normalize-scss/sass/normalize/import-now";
+@import "../libs/swiper.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
@@ -6,7 +7,6 @@
 @import "global/container.scss";
 @import "blocks/page-header.scss";
 @import "blocks/menu.scss";
-@import "../libs/swiper.scss";
 @import "blocks/slider.scss";
 @import "blocks/blog.scss";
 @import "blocks/page-footer.scss";

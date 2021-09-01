@@ -24,10 +24,13 @@ if (menu) {
   });
 }
 
-const slider = document.querySelector('.swiper');
+const mySwiper = document.querySelector('.swiper');
 
-if (slider) {
-  new Swiper(slider, {
+if (mySwiper) {
+  const slider = document.querySelector('.slider');
+  slider.classList.remove('slider--nojs');
+
+  new Swiper(mySwiper, {
     mousewheel: true,
     loop: true,
     spaceBetween: 30,
