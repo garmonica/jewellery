@@ -69,3 +69,19 @@ if (mySwiper) {
     },
   });
 }
+
+const accordion = document.querySelector('.questions__list');
+
+if (accordion) {
+  accordion.classList.remove('questions__list--nojs');
+  const accordionItems = accordion.querySelectorAll('.questions__item');
+  accordionItems.forEach((elem) => elem.classList.add('questions__item--closed'));
+
+  accordion.addEventListener('click', (evt) => {
+    const accordionButton = evt.target;
+    if (accordionButton.tagName !== 'BUTTON') {
+      return;
+    }
+    accordionButton.parentNode.classList.toggle('questions__item--closed');
+  });
+}
