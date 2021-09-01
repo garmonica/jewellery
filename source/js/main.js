@@ -78,10 +78,9 @@ if (accordion) {
   accordionItems.forEach((elem) => elem.classList.add('questions__item--closed'));
 
   accordion.addEventListener('click', (evt) => {
-    const accordionButton = evt.target;
-    if (accordionButton.tagName !== 'BUTTON') {
+    if (evt.target.tagName !== 'BUTTON') {
       return;
     }
-    accordionButton.parentNode.classList.toggle('questions__item--closed');
+    evt.target.parentNode.classList.toggle('questions__item--closed');
   });
 }
