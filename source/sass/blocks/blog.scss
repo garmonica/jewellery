@@ -11,6 +11,10 @@
 .blog__read-all {
   @include link-style;
   margin-bottom: 65px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .blog__wrapper {
@@ -44,9 +48,10 @@
 
   @media (max-width: $mobile-width) {
     display: block;
+    margin-bottom: 40px;
   }
 
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     .blog__img-wrapper {
       order: 2;
     }
@@ -75,24 +80,28 @@
   }
 }
 
-.blog__content {
+.blog__content-wrapper {
   min-width: 285px;
   width: 50%;
   min-height: 300px;
-  padding: 68px 60px;
+  padding: 21px 56px 28px;
   background: $basic-light;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: $tablet-width) {
     min-width: 339px;
     width: 50%;
-    padding: 68px 85px;
+    padding: 21px 85px 28px;
   }
 
   @media (max-width: $mobile-width) {
     min-width: auto;
+    min-height: 256px;
     width: 100%;
-    padding: 50px 60px;
+    padding: 21px 60px 28px;
   }
 }
 
@@ -130,11 +139,32 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @media (max-width: $tablet-width) {
+      position: relative;
+      width: 50%;
+      height: auto;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 100%;
+    }
   }
 
-  .blog__content {
-    z-index: $zindex-blog;
+  .blog__content-wrapper {
     margin-top: auto;
     margin-left: auto;
+    padding: 11px 56px 53px;
+    z-index: $zindex-blog;
+
+    @media (max-width: $tablet-width) {
+      margin-top: 0;
+      margin-left: 0;
+      padding: 21px 85px 28px;
+    }
+
+    @media (max-width: $mobile-width) {
+      padding: 21px 60px 28px;
+    }
   }
 }
