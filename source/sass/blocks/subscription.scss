@@ -43,6 +43,15 @@
     color: $dark-grey;
   }
 
+  &:hover,
+  &:focus-within {
+    border-bottom: 1px solid $basic-brown;
+
+    input::placeholder {
+      color: $basic-brown;
+    }
+  }
+
   button {
     padding: 10px 0 10px 10px;
     background: transparent;
@@ -50,6 +59,19 @@
     font-family: inherit;
     color: inherit;
     font-size: 16px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $basic-white;
+      background: $basic-brown;
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   svg {

@@ -57,6 +57,7 @@
     border: none;
     position: relative;
     cursor: pointer;
+    outline: none;
 
     @media (max-width: $tablet-width) {
       padding: 43px 115px 26px 49px;
@@ -92,6 +93,21 @@
         top: 26px;
         right: 27px;
       }
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      border-color: $basic-dark;
+      animation: arrow-animation-opened 1.5s linear infinite;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 
@@ -138,6 +154,11 @@
         top: 16px;
       }
     }
+
+    &:hover::after,
+    &:focus::after {
+      animation: arrow-animation-closed 1.5s linear infinite;
+    }
   }
 
   p {
@@ -150,5 +171,33 @@
     &::after {
       display: none;
     }
+  }
+}
+
+@keyframes arrow-animation-closed {
+  25% {
+    top: 42px;
+  }
+
+  50% {
+    top: 45px;
+  }
+
+  75% {
+    top: 48px;
+  }
+}
+
+@keyframes arrow-animation-opened {
+  25% {
+    top: 49px;
+  }
+
+  50% {
+    top: 52px;
+  }
+
+  75% {
+    top: 55px;
   }
 }

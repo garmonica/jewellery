@@ -40,10 +40,10 @@
 
 .follow-us__link {
   @include link-style;
-  margin-bottom: 66px;
+  margin-bottom: 61px;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 51px;
+    margin-bottom: 46px;
   }
 }
 

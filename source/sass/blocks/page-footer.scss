@@ -21,6 +21,27 @@
     font-size: 16px;
     line-height: 21px;
     padding: 10px 0 11px;
+
+    &:hover,
+    &:focus {
+      color: $dark-grey;
+      position: relative;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $basic-brown;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
 

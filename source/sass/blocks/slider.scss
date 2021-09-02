@@ -1,80 +1,74 @@
 .slider {
   position: relative;
   padding-top: 120px;
-  padding-bottom: 78px;
+  padding-bottom: 82px;
   text-align: center;
   z-index: $zindex-slider;
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;
-    padding-bottom: 28px;
+    padding-bottom: 52px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 60px;
-    padding-bottom: 24px;
+    padding-bottom: 43px;
+  }
+}
+
+.slider__heading {
+  @include heading-style;
+  margin-bottom: 24px;
+  padding: 0 50px;
+  letter-spacing: normal;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.slider__link {
+  @include link-style;
+  padding: 0;
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 53px;
   }
 
-  h2 {
-    @include heading-style;
-    margin-bottom: 24px;
-    padding: 0 50px;
-    letter-spacing: normal;
-
-    @media (max-width: $tablet-width) {
-      margin-bottom: 20px;
-    }
+  @media (max-width: $mobile-width) {
+    margin-bottom: 45px;
   }
 
-  a {
-    @include link-style;
-    margin-bottom: 60px;
+  &::after {
+    bottom: 0;
 
     @media (max-width: $tablet-width) {
-      margin-bottom: 53px;
-    }
-
-    @media (max-width: $mobile-width) {
-      margin-bottom: 45px;
-    }
-
-    &::after {
-      bottom: 0;
-
-      @media (max-width: $tablet-width) {
-        bottom: -5px;
-      }
+      bottom: -5px;
     }
   }
 }
 
 .slider__wrapper {
-  padding-bottom: 76px;
-
-  @media (max-width: $tablet-width) {
-    padding-bottom: 66px;
-  }
-
-  @media (max-width: $mobile-width) {
-    padding-bottom: 51px;
-  }
+  padding: 15px 15px 20px;
+  margin: -15px -15px;
 }
 
 .slider__pagination {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 26px;
   left: 0;
   right: 0;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    bottom: 0;
+    bottom: 6px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: 30px;
+    bottom: 12px;
     font-size: 16px;
     letter-spacing: 0.1em;
   }
@@ -85,11 +79,38 @@
     font-size: 16px;
     line-height: 21px;
     cursor: pointer;
+    outline: none;
+    position: relative;
+
+    &:hover::after,
+    &:focus::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 2px;
+      background: $basic-dark;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   .swiper-pagination-bullet-active {
     color: $basic-dark;
     cursor: default;
+
+    &:hover::after,
+    &:focus::after {
+      display: none;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
@@ -101,6 +122,8 @@
   background: transparent;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
+  outline: none;
 
   @media (max-width: $tablet-width) {
     top: 99px;
@@ -109,9 +132,40 @@
   @media (max-width: $mobile-width) {
     display: none;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic-white;
+
+    &::before {
+      background: $basic-brown;
+    }
+
+    .slider__arrow {
+      z-index: $zindex-slider;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .slider__arrow {
+  position: relative;
+
   @media (max-width: $tablet-width) {
     width: 36px;
     height: 15px;
@@ -125,6 +179,14 @@
 
 .slider__button--next {
   right: -10px;
+
+  .slider__arrow {
+    top: 1px;
+
+    @media (max-width: $tablet-width) {
+      top: 3px;
+    }
+  }
 }
 
 .slider__list {
@@ -132,6 +194,22 @@
 }
 
 .slider__item {
+  a {
+    color: inherit;
+    display: block;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 6px 12px rgba($dark-grey, 0.5);
+      color: $basic-brown;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
   img {
     vertical-align: top;
     object-fit: cover;
@@ -153,6 +231,7 @@
 
   p {
     @include offset;
+    padding-bottom: 15px;
     font-weight: 700;
   }
 }
