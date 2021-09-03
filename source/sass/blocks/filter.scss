@@ -308,6 +308,7 @@ input:checked + .filter__checkbox-label:active::before {
 
 .filter__toggle {
   @include offset;
+  display: block;
   width: 15px;
   height: 15px;
   background-color: $basic-brown;
