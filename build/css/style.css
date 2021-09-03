@@ -2369,6 +2369,9 @@ input:checked + .filter__checkbox-label:active::before {
       margin-left: 18%; } }
 
 .filter__toggle {
+  margin: 0;
+  padding: 0;
+  display: block;
   width: 15px;
   height: 15px;
   background-color: #a87b62;
@@ -2387,13 +2390,6 @@ input:checked + .filter__checkbox-label:active::before {
     background: #564034; }
 
 .filter__price-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: absolute;
   top: -2px;
   margin-bottom: 12px;
@@ -2427,10 +2423,8 @@ input:checked + .filter__checkbox-label:active::before {
 
 .filter__price-output {
   padding: 7px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -16px; }
+  margin-left: -16px;
+  vertical-align: baseline; }
   @media (max-width: 1023px) {
     .filter__price-output {
       font-size: 16px;

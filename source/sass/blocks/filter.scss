@@ -333,8 +333,6 @@ input:checked + .filter__checkbox-label:active::before {
 }
 
 .filter__price-wrapper {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   top: -2px;
   margin-bottom: 12px;
@@ -377,8 +375,8 @@ input:checked + .filter__checkbox-label:active::before {
 
 .filter__price-output {
   padding: 7px;
-  display: flex;
   margin-left: -16px;
+  vertical-align: baseline;
 
   @media (max-width: $tablet-width) {
     font-size: 16px;
