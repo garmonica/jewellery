@@ -32,7 +32,6 @@ if (mySwiper) {
 
   new Swiper(mySwiper, {
     mousewheel: true,
-    loop: true,
     spaceBetween: 30,
     navigation: {
       prevEl: '.swiper-button-custom-prev',
@@ -82,5 +81,56 @@ if (accordion) {
       return;
     }
     evt.target.parentNode.classList.toggle('questions__item--closed');
+  });
+}
+
+const filter = document.querySelector('.filter');
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+
+if (filter) {
+  filter.classList.remove('filter--nojs');
+
+  const filterFields = filter.querySelectorAll('.filter__field');
+  filterFields.forEach((elem) => elem.classList.add('filter__field--closed'));
+
+  filter.addEventListener('click', (evt) => {
+    if (!evt.target.classList.contains('filter__field-button')) {
+      return;
+    }
+    evt.target.closest('.filter__field').classList.toggle('filter__field--closed');
+  });
+
+  const filterOpen = filter.querySelector('.filter__button');
+  const filterBlock = filter.querySelector('.filter__form-wrapper');
+  const filterClose = filter.querySelector('.filter__close');
+  const form = filter.querySelector('form');
+
+  const openFilter = () => {
+    filterBlock.classList.add('filter__form-wrapper--opened');
+    document.body.append(overlay);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeFilter = () => {
+    filterBlock.classList.remove('filter__form-wrapper--opened');
+    overlay.remove();
+    document.body.style.overflow = 'auto';
+  };
+
+  filterOpen.addEventListener('click', () => openFilter());
+  filterClose.addEventListener('click', () => closeFilter());
+  overlay.addEventListener('click', () => closeFilter());
+
+  window.addEventListener('keydown', (evt) => {
+    if (evt.key === ('Escape' || 'Esc')) {
+      evt.preventDefault();
+      closeFilter();
+    }
+  });
+
+  form.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    closeFilter();
   });
 }

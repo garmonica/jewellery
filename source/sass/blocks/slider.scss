@@ -14,6 +14,20 @@
     padding-top: 60px;
     padding-bottom: 43px;
   }
+
+  .swiper-button-disabled {
+    opacity: 0.5;
+    cursor: default;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+    }
+  }
 }
 
 .slider__heading {

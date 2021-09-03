@@ -63,12 +63,12 @@
 
   @media (max-width: $tablet-width) {
     justify-content: flex-start;
-    padding-bottom: 24px;
+    padding-bottom: 30px;
   }
 
   @media (max-width: $mobile-width) {
     padding-top: 20px;
-    padding-bottom: 14px;
+    padding-bottom: 20px;
   }
 }
 

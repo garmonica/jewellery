@@ -1,0 +1,15 @@
+.page-main {
+  flex-grow: 1;
+}
+
+.page-main__catalog-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    padding-top: 50px;
+  }
+}

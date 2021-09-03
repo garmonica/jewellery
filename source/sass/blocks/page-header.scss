@@ -41,3 +41,18 @@
     }
   }
 }
+
+.page-header__slogan--catalog {
+  min-height: 261px;
+
+  dt {
+    font-size: 32px;
+    line-height: 46px;
+  }
+
+  dd {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 34px;
+  }
+}

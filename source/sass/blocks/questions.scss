@@ -95,19 +95,21 @@
       }
     }
 
-    &:hover,
-    &:focus {
-      color: $basic-brown;
-    }
+    @media (min-width: $desktop-width-only) {
+      &:hover,
+      &:focus {
+        color: $basic-brown;
+      }
 
-    &:hover::after,
-    &:focus::after {
-      border-color: $basic-dark;
-      animation: arrow-animation-opened 1.5s linear infinite;
-    }
+      &:hover::after,
+      &:focus::after {
+        border-color: $basic-dark;
+        animation: arrow-animation-opened 1.5s linear infinite;
+      }
 
-    &:active {
-      opacity: 0.5;
+      &:active {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -155,9 +157,11 @@
       }
     }
 
-    &:hover::after,
-    &:focus::after {
-      animation: arrow-animation-closed 1.5s linear infinite;
+    @media (min-width: $desktop-width-only) {
+      &:hover::after,
+      &:focus::after {
+        animation: arrow-animation-closed 1.5s linear infinite;
+      }
     }
   }
 
