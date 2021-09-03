@@ -29,6 +29,7 @@
   @media (max-width: $tablet-width) {
     display: none;
     position: fixed;
+    max-height: calc(100vh - 32px);
     top: 50%;
     left: 163px;
     right: 163px;
@@ -306,6 +307,7 @@ input:checked + .filter__checkbox-label:active::before {
 }
 
 .filter__toggle {
+  @include offset;
   width: 15px;
   height: 15px;
   background-color: $basic-brown;

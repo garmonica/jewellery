@@ -2140,6 +2140,7 @@ a {
   .filter__form-wrapper {
     display: none;
     position: fixed;
+    max-height: calc(100vh - 32px);
     top: 50%;
     left: 163px;
     right: 163px;
