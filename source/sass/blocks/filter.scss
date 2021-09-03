@@ -28,25 +28,26 @@
 .filter__form-wrapper {
   @media (max-width: $tablet-width) {
     display: none;
-    min-width: 506px;
-    max-height: 100vh;
-    padding: 32px;
     position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    overflow-y: auto;
+    top: 50%;
+    left: 163px;
+    right: 163px;
+    margin: 0 auto;
+    transform: translate(0, -50%);
     z-index: $zindex-popup;
   }
 
   @media (max-width: $mobile-width) {
-    min-width: 320px;
-    padding: 25px;
+    max-width: 450px;
+    left: 25px;
+    right: 25px;
   }
 
   form {
     @media (max-width: $tablet-width) {
       background: $basic-white;
+      overflow-y: auto;
+      max-height: calc(100vh - 32px);
       box-shadow: 0 5px 32px $filter-shadow;
     }
   }
@@ -58,8 +59,8 @@
   @media (max-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: -16px;
+    right: -16px;
     width: 32px;
     height: 32px;
     background: $basic-dark;
@@ -91,8 +92,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    top: 8px;
-    right: 15px;
+    right: -10px;
   }
 }
 
@@ -272,12 +272,18 @@ input:checked + .filter__checkbox-label:active::before {
 }
 
 .filter__range {
-  width: 100%;
-  padding: 5px 25px;
+  max-width: 250px;
+  padding: 5px 25px 49px;
   position: relative;
 
   @media (max-width: $tablet-width) {
-    padding: 15px 88px 15px 50px;
+    max-width: 404px;
+    padding: 15px 50px 71px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 270px;
+    padding: 15px 10px 61px;
   }
 }
 
@@ -302,8 +308,6 @@ input:checked + .filter__checkbox-label:active::before {
 .filter__toggle {
   width: 15px;
   height: 15px;
-  position: absolute;
-  top: -2px;
   background-color: $basic-brown;
   border: none;
   border-radius: 50%;
@@ -313,7 +317,6 @@ input:checked + .filter__checkbox-label:active::before {
   @media (max-width: $tablet-width) {
     width: 18px;
     height: 18px;
-    top: 7px;
   }
 
   &:hover,
@@ -326,30 +329,17 @@ input:checked + .filter__checkbox-label:active::before {
   }
 }
 
-.filter__toggle--min {
-  left: 28%;
-
-  @media (max-width: $tablet-width) {
-    left: 21%;
-  }
-}
-
-.filter__toggle--max {
-  left: 70%;
-
-  @media (max-width: $tablet-width) {
-    left: 61%;
-  }
-}
-
 .filter__price-wrapper {
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -2px;
   margin-bottom: 12px;
-  padding-left: 54px;
   font-size: 14px;
   line-height: 18px;
 
   @media (max-width: $tablet-width) {
+    top: 7px;
     margin-bottom: 21px;
   }
 
@@ -358,8 +348,40 @@ input:checked + .filter__checkbox-label:active::before {
   }
 }
 
+.filter__price-wrapper--min {
+  left: 28%;
+
+  @media (max-width: $tablet-width) {
+    left: 24%;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 19%;
+  }
+}
+
+.filter__price-wrapper--max {
+  left: 70%;
+
+  @media (max-width: $tablet-width) {
+    left: 67%;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 69%;
+  }
+}
+
 .filter__price-output {
   padding: 7px;
+  display: flex;
+  margin-left: -16px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 21px;
+    margin-left: -18px;
+  }
 
   input {
     @include offset;
@@ -382,10 +404,6 @@ input:checked + .filter__checkbox-label:active::before {
       color: $basic-brown;
     }
   }
-}
-
-.filter__price-output--min {
-  margin-right: 26px;
 }
 
 .filter__form-buttons {
@@ -452,7 +470,11 @@ input:checked + .filter__checkbox-label:active::before {
   }
 
   .filter__field-button {
-    padding-bottom: 35px;
+    padding-bottom: 22px;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 35px;
+    }
 
     @media (max-width: $mobile-width) {
       padding-bottom: 23px;

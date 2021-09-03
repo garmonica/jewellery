@@ -157,17 +157,19 @@
                   <div class="filter__scale">
                     <div class="filter__bar"></div>
                   </div>
-                  <button class="filter__toggle filter__toggle--min" type="button" aria-label="Lowest price"></button>
-                  <button class="filter__toggle filter__toggle--max" type="button" aria-label="Highest price"></button>
-                </div>
-                <div class="filter__price-wrapper">
-                  <div class="filter__price-output filter__price-output--min">$
-                    <label class="visually-hidden" for="lowest-price">Lowest price</label>
-                    <input id="lowest-price" type="number" value="55">
+                  <div class="filter__price-wrapper filter__price-wrapper--min">
+                    <button class="filter__toggle" type="button" aria-label="Lowest price"></button>
+                    <div class="filter__price-output">
+                      <label class="visually-hidden" for="lowest-price">Lowest price</label>
+                      $&nbsp;<input id="lowest-price" type="number" value="55">
+                    </div>
                   </div>
-                  <div class="filter__price-output filter__price-output--max">$
-                    <label class="visually-hidden" for="highest-price">Highest price</label>
-                    <input id="highest-price" type="number" value="155">
+                  <div class="filter__price-wrapper filter__price-wrapper--max">
+                    <button class="filter__toggle" type="button" aria-label="Highest price"></button>
+                    <div class="filter__price-output">
+                      <label class="visually-hidden" for="highest-price">Highest price</label>
+                      $&nbsp;<input id="highest-price" type="number" value="155">
+                    </div>
                   </div>
                 </div>
               </div>
