@@ -34,6 +34,7 @@
     font-weight: 400;
     font-size: 38px;
     line-height: 43px;
+    text-align: center;
 
     @media (max-width: $mobile-width) {
       font-size: 34px;
@@ -47,12 +48,12 @@
 
   dt {
     font-size: 32px;
-    line-height: 46px;
+    line-height: 45px;
   }
 
   dd {
     font-weight: 500;
     font-size: 22px;
-    line-height: 34px;
+    line-height: 29px;
   }
 }

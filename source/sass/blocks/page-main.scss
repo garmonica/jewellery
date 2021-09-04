@@ -1,15 +1,36 @@
 .page-main {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .page-main__catalog-wrapper {
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 39px;
   display: flex;
   align-items: flex-start;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     display: block;
     padding-top: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 40px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 1px;
+    background: $light-grey;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
   }
 }
