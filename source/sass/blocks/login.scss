@@ -1,0 +1,219 @@
+.login {
+  position: relative;
+  max-width: 430px;
+  padding: 138px 45px 53px;
+  background: $basic-light;
+  margin: 40px auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: 450px;
+    padding: 138px 50px 53px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 270px;
+    padding: 85px 15px 39px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/login-bg.jpg") no-repeat center / cover;
+    width: 100%;
+    height: 138px;
+
+    @media (max-width: $mobile-width) {
+      height: 84px;
+    }
+  }
+}
+
+.login--modal {
+  display: none;
+  max-height: 100vh;
+  margin: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: $zindex-popup;
+  overflow-y: auto;
+}
+
+.login--show {
+  display: block;
+}
+
+.login__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+
+  @media (max-width: $tablet-width) {
+    top: 12px;
+    right: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 5px;
+    right: 5px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 18px;
+    height: 2px;
+    background: $basic-dark;
+
+    @media (max-width: $tablet-width) {
+      width: 25px;
+      height: 3px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 17px;
+      height: 2px;
+    }
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+    background: $basic-brown;
+
+    &::before {
+      background: $basic-white;
+    }
+
+    &::after {
+      background: $basic-white;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.login__heading {
+  @include heading-style;
+  padding: 50px 50px 24px;
+
+  @media (max-width: $mobile-width) {
+    padding: 37px 50px 18px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.login__field {
+  input {
+    @include offset;
+    min-width: 340px;
+    padding: 11px 0;
+    width: 100%;
+    font-family: inherit;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $basic-dark;
+    outline: none;
+
+    @media (max-width: $mobile-width) {
+      min-width: 240px;
+    }
+
+    &::placeholder {
+      color: $dark-grey;
+      opacity: 1;
+    }
+  }
+}
+
+.login__field--email {
+  input {
+    margin-bottom: 26px;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.login__forgot-password {
+  display: block;
+  padding: 5px 1px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $dark-grey;
+  text-align: right;
+}
+
+.login__submit {
+  display: block;
+  margin-top: 41px;
+  margin-bottom: 14px;
+  padding: 24px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: $basic-white;
+  border: none;
+  background: $basic-brown;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 30px;
+  }
+}
+
+.login__signup {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  span {
+    color: $dark-grey;
+    margin-right: 8px;
+
+    @media (max-width: $tablet-width) {
+      margin-right: 5px;
+    }
+  }
+
+  a {
+    color: $basic-dark;
+    margin-right: 6px;
+
+    @media (max-width: $tablet-width) {
+      margin-right: 0;
+    }
+  }
+}

@@ -134,3 +134,54 @@ if (filter) {
     closeFilter();
   });
 }
+
+const login = document.querySelector('.login');
+const loginOpen = document.querySelector('.menu__usernav-link--login');
+
+if (login) {
+  const loginForm = login.querySelector('form');
+  const loginClose = login.querySelector('.login__close');
+  const loginEmail = login.querySelector('input[type="email"]');
+  const loginPassword = login.querySelector('input[type="password"]');
+
+  const openLogin = () => {
+    login.classList.add('login--show');
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+
+    if (!loginEmail.value) {
+      loginEmail.focus();
+    } else {
+      loginPassword.focus();
+    }
+  };
+
+  const closeLogin = () => {
+    login.classList.remove('login--show');
+    document.body.removeChild(overlay);
+    document.body.style.overflow = 'auto';
+  };
+
+  loginOpen.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openLogin();
+  });
+
+  loginClose.addEventListener('click', () => closeLogin());
+
+  overlay.addEventListener('click', () => closeLogin());
+
+  window.addEventListener('keydown', (evt) => {
+    if (evt.key === ('Escape' || 'Esc')) {
+      if (login.classList.contains('login--show')) {
+        evt.preventDefault();
+        closeLogin();
+      }
+    }
+  });
+
+  loginForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    closeLogin();
+  });
+}

@@ -54,6 +54,12 @@
   }
 }
 
+.menu--login {
+  @media (min-width: $desktop-width-only) {
+    padding-bottom: 7px;
+  }
+}
+
 .menu__wrapper {
   padding-top: 30px;
   display: flex;
@@ -75,11 +81,12 @@
 .menu__logo {
   display: block;
   outline: none;
+  margin: 0 auto;
 
   &:hover,
   &:focus {
     padding: 7px;
-    margin: -7px;
+    margin: -7px auto;
     background: $basic-brown;
     border-radius: 50%;
 
@@ -93,9 +100,8 @@
   }
 
   @media (max-width: $tablet-width) {
-    flex-grow: 1;
     text-align: center;
-    margin: 0 50px;
+    margin: 0 auto;
     order: -1;
   }
 
@@ -135,8 +141,8 @@
     padding: 24px 0;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $basic-brown;
     position: relative;
 
@@ -151,22 +157,21 @@
     }
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.5;
   }
 }
 
 .menu__usernav-link--login {
   @media (max-width: $tablet-width) {
-    margin-left: 0;
-    margin-top: 10px;
+    margin: 10px 0 22px;
     font-size: 18px;
     line-height: 23px;
     color: $basic-white;
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: 0;
+    margin: 0;
   }
 }
 
@@ -230,14 +235,14 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
-    margin-top: 34px;
+    margin-top: 40px;
     order: initial;
     width: 100%;
     max-width: 100%;
   }
 
   @media (max-width: $mobile-width) {
-    margin-top: 25px;
+    margin-top: 30px;
   }
 
   svg {
