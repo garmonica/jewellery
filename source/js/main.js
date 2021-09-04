@@ -1,6 +1,9 @@
 /* global Swiper:readonly */
 const menu = document.querySelector('.menu');
 
+const login = document.querySelector('.login');
+const loginOpen = document.querySelector('.menu__usernav-link--login');
+
 if (menu) {
   const menuToggle = menu.querySelector('button');
   const body = document.querySelector('body');
@@ -22,6 +25,8 @@ if (menu) {
   menuToggle.addEventListener('click', () => {
     menu.classList.contains('menu--closed') ? openMenu() : closeMenu();
   });
+
+  loginOpen.addEventListener('click', () => closeMenu());
 }
 
 const mySwiper = document.querySelector('.swiper');
@@ -88,6 +93,7 @@ const filter = document.querySelector('.filter');
 const overlay = document.createElement('div');
 overlay.classList.add('overlay');
 
+
 if (filter) {
   filter.classList.remove('filter--nojs');
 
@@ -134,9 +140,6 @@ if (filter) {
     closeFilter();
   });
 }
-
-const login = document.querySelector('.login');
-const loginOpen = document.querySelector('.menu__usernav-link--login');
 
 if (login) {
   const loginForm = login.querySelector('form');
