@@ -83,6 +83,10 @@ if (mySwiper) {
 
 if (accordion) {
   accordion.classList.remove('questions__list--nojs');
+
+  const accordionButtons = accordion.querySelectorAll('button');
+  accordionButtons.forEach((elem) => elem.disabled = false);
+
   const accordionItems = accordion.querySelectorAll('.questions__item');
   accordionItems.forEach((elem) => elem.classList.add('questions__item--closed'));
 
@@ -96,6 +100,8 @@ if (accordion) {
 
 if (filter) {
   filter.classList.remove('filter--nojs');
+  const filterFieldButtons = filter.querySelectorAll('.filter__field-button');
+  filterFieldButtons.forEach((elem) => elem.disabled = false);
 
   const filterFields = filter.querySelectorAll('.filter__field');
   filterFields.forEach((elem) => elem.classList.add('filter__field--closed'));
@@ -107,7 +113,7 @@ if (filter) {
     evt.target.closest('.filter__field').classList.toggle('filter__field--closed');
   });
 
-  const filterOpen = filter.querySelector('.filter__button');
+  const filterOpen = filter.querySelector('.filter__open');
   const filterBlock = filter.querySelector('.filter__form-wrapper');
   const filterClose = filter.querySelector('.filter__close');
   const form = filter.querySelector('form');

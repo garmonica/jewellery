@@ -7,7 +7,7 @@
   }
 }
 
-.filter__button {
+.filter__open {
   display: none;
 
   @media (max-width: $tablet-width) {
@@ -157,6 +157,7 @@
   position: relative;
   cursor: pointer;
   outline: none;
+  color: inherit;
 
   @media (max-width: $tablet-width) {
     padding: 34px 40px 18px;
@@ -205,6 +206,12 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  &:disabled {
+    color: inherit;
+    cursor: default;
+    opacity: 1;
   }
 }
 
@@ -521,6 +528,12 @@ input:checked + .filter__checkbox-label:active::before {
 
     @media (max-width: $mobile-width) {
       min-width: 100%;
+    }
+  }
+
+  form {
+    @media (max-width: $tablet-width) {
+      max-height: 100%;
     }
   }
 

@@ -111,6 +111,12 @@
         opacity: 0.5;
       }
     }
+
+    &:disabled {
+      cursor: default;
+      color: inherit;
+      opacity: 1;
+    }
   }
 
   p {

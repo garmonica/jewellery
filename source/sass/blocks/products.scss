@@ -61,9 +61,8 @@
   }
 
   img {
-    @media (max-width: $mobile-width) {
-      min-height: 136px;
-    }
+    width: 100%;
+    height: auto;
   }
 }
 
