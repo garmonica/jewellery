@@ -2864,7 +2864,7 @@ input:checked + .filter__checkbox-label:active::before {
   border: none;
   background: transparent;
   border-bottom: 1px solid #1d1613;
-  border-radius: none;
+  border-radius: 0;
   outline: none; }
   @media (max-width: 767px) {
     .login__field input {
