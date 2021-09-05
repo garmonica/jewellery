@@ -13,11 +13,10 @@
   }
 
   img {
-    vertical-align: top;
+    display: block;
     margin-bottom: 34px;
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: auto;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 20px;
@@ -59,6 +58,7 @@
 .follow-us__img-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-right: 27px;
 
   @media (max-width: $tablet-width) {
@@ -76,17 +76,22 @@
 }
 
 .follow-us__img-wrapper--main {
-  img {
-    @media (max-width: $mobile-width) {
-      height: 100%;
-      object-position: -47px 0;
+  @media (max-width: $mobile-width) {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 27px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }
 
 .follow-us__img-wrapper--short {
   @media (max-width: $mobile-width) {
-    img:first-child {
+    picture:first-child {
       display: none;
     }
   }

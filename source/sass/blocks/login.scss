@@ -20,9 +20,13 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../img/login-bg.jpg") no-repeat center / cover;
+    background: $basic-brown url("../img/login-bg.jpg") no-repeat center / cover;
     width: 100%;
     height: 138px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-bg@2x.jpg");
+    }
 
     @media (max-width: $mobile-width) {
       height: 84px;
@@ -137,6 +141,7 @@
     border: none;
     background: transparent;
     border-bottom: 1px solid $basic-dark;
+    border-radius: none;
     outline: none;
 
     @media (max-width: $mobile-width) {
@@ -146,6 +151,16 @@
     &::placeholder {
       color: $dark-grey;
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $basic-brown;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+      color: $basic-brown;
     }
   }
 }
@@ -168,6 +183,16 @@
   line-height: 18px;
   color: $dark-grey;
   text-align: right;
+
+  &:hover,
+  &:focus {
+    color: $basic-dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .login__submit {
@@ -187,6 +212,15 @@
 
   @media (max-width: $mobile-width) {
     margin-top: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    background: rgba($basic-brown, 0.8);
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -214,6 +248,16 @@
 
     @media (max-width: $tablet-width) {
       margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }
