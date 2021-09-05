@@ -701,7 +701,7 @@ a {
   margin: 0;
   padding: 0;
   padding: 45px;
-  background: #564034 url("../img/bg-header.jpg") no-repeat center/cover;
+  background: #564034 url("../img/bg-main-desktop.jpg") no-repeat center/cover;
   min-height: 463px;
   font-family: "Cormorant Garamond", "Garamond", serif;
   color: #ffffff;
@@ -720,9 +720,22 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .page-header__slogan {
+      background-image: url("../img/bg-main-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .page-header__slogan {
+      background-image: url("../img/bg-main-tablet.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .page-header__slogan {
+      background-image: url("../img/bg-main-tablet@2x.jpg"); } }
   @media (max-width: 767px) {
     .page-header__slogan {
+      background-image: url("../img/bg-main-mobile.jpg");
       padding: 15px; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+    .page-header__slogan {
+      background-image: url("../img/bg-main-mobile@2x.jpg"); } }
   .page-header__slogan dt {
     font-weight: 700;
     font-size: 45px;
@@ -746,12 +759,28 @@ a {
         font-size: 34px;
         line-height: 36px; } }
 
-.page-header__slogan--inner {
-  min-height: 261px; }
-  .page-header__slogan--inner dt {
+.page-header__slogan--catalog {
+  min-height: 261px;
+  background: #564034 url("../img/bg-catalog-desktop.jpg") no-repeat center/cover; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .page-header__slogan--catalog {
+      background-image: url("../img/bg-catalog-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .page-header__slogan--catalog {
+      background-image: url("../img/bg-catalog-tablet.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .page-header__slogan--catalog {
+      background-image: url("../img/bg-catalog-tablet@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .page-header__slogan--catalog {
+      background-image: url("../img/bg-catalog-mobile.jpg"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+    .page-header__slogan--catalog {
+      background-image: url("../img/bg-catalog-mobile@2x.jpg"); } }
+  .page-header__slogan--catalog dt {
     font-size: 32px;
     line-height: 45px; }
-  .page-header__slogan--inner dd {
+  .page-header__slogan--catalog dd {
     font-weight: 500;
     font-size: 22px;
     line-height: 29px; }
@@ -1370,40 +1399,38 @@ a {
   padding: 0;
   list-style: none; }
 
-.slider__item a {
-  color: inherit;
-  display: block;
-  outline: none; }
-  .slider__item a:hover, .slider__item a:focus {
-    -webkit-box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
-            box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
-    color: #a87b62; }
-  .slider__item a:active {
-    opacity: 0.5; }
-
-.slider__item img {
-  vertical-align: top;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%; }
-
-.slider__item h3 {
-  margin: 0;
-  padding: 0;
-  margin: 21px 0 7px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px; }
-  @media (max-width: 767px) {
-    .slider__item h3 {
-      margin: 14px 0 7px; } }
-
-.slider__item p {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 15px;
-  font-weight: 700; }
+.slider__item {
+  height: auto; }
+  .slider__item a {
+    color: inherit;
+    display: block;
+    height: 100%;
+    outline: none; }
+    .slider__item a:hover, .slider__item a:focus {
+      -webkit-box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
+              box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
+      color: #a87b62; }
+    .slider__item a:active {
+      opacity: 0.5; }
+  .slider__item img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .slider__item h3 {
+    margin: 0;
+    padding: 0;
+    margin: 21px 0 7px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px; }
+    @media (max-width: 767px) {
+      .slider__item h3 {
+        margin: 14px 0 7px; } }
+  .slider__item p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px;
+    font-weight: 700; }
 
 .slider--nojs .slider__list {
   overflow-x: auto; }
@@ -1817,12 +1844,10 @@ a {
     .follow-us {
       padding-bottom: 44px; } }
   .follow-us img {
-    vertical-align: top;
+    display: block;
     margin-bottom: 34px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 100%;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
     @media (max-width: 1023px) {
       .follow-us img {
         margin-bottom: 20px; } }
@@ -1894,6 +1919,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-right: 27px; }
   @media (max-width: 1023px) {
     .follow-us__img-wrapper {
@@ -1906,13 +1934,17 @@ a {
     margin-right: 0; }
 
 @media (max-width: 767px) {
-  .follow-us__img-wrapper--main img {
-    height: 100%;
-    -o-object-position: -47px 0;
-       object-position: -47px 0; } }
+  .follow-us__img-wrapper--main {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 27px; }
+    .follow-us__img-wrapper--main img {
+      position: absolute;
+      top: 0;
+      left: 0; } }
 
 @media (max-width: 767px) {
-  .follow-us__img-wrapper--short img:first-child {
+  .follow-us__img-wrapper--short picture:first-child {
     display: none; } }
 
 .page-footer {
@@ -2729,9 +2761,12 @@ input:checked + .filter__checkbox-label:active::before {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../img/login-bg.jpg") no-repeat center/cover;
+    background: #a87b62 url("../img/login-bg.jpg") no-repeat center/cover;
     width: 100%;
     height: 138px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .login::before {
+        background-image: url("../img/login-bg@2x.jpg"); } }
     @media (max-width: 767px) {
       .login::before {
         height: 84px; } }
@@ -2829,6 +2864,7 @@ input:checked + .filter__checkbox-label:active::before {
   border: none;
   background: transparent;
   border-bottom: 1px solid #1d1613;
+  border-radius: none;
   outline: none; }
   @media (max-width: 767px) {
     .login__field input {
@@ -2848,6 +2884,18 @@ input:checked + .filter__checkbox-label:active::before {
   .login__field input::placeholder {
     color: #9b9997;
     opacity: 1; }
+  .login__field input:hover, .login__field input:focus {
+    border-color: #a87b62; }
+  .login__field input:hover::-webkit-input-placeholder, .login__field input:focus::-webkit-input-placeholder {
+    color: #a87b62; }
+  .login__field input:hover::-moz-placeholder, .login__field input:focus::-moz-placeholder {
+    color: #a87b62; }
+  .login__field input:hover:-ms-input-placeholder, .login__field input:focus:-ms-input-placeholder {
+    color: #a87b62; }
+  .login__field input:hover::-ms-input-placeholder, .login__field input:focus::-ms-input-placeholder {
+    color: #a87b62; }
+  .login__field input:hover::placeholder, .login__field input:focus::placeholder {
+    color: #a87b62; }
 
 .login__field--email input {
   margin-bottom: 26px; }
@@ -2863,6 +2911,11 @@ input:checked + .filter__checkbox-label:active::before {
   line-height: 18px;
   color: #9b9997;
   text-align: right; }
+  .login__forgot-password:hover, .login__forgot-password:focus {
+    color: #1d1613;
+    text-decoration: underline; }
+  .login__forgot-password:active {
+    opacity: 0.5; }
 
 .login__submit {
   display: block;
@@ -2881,6 +2934,10 @@ input:checked + .filter__checkbox-label:active::before {
   @media (max-width: 767px) {
     .login__submit {
       margin-top: 30px; } }
+  .login__submit:hover, .login__submit:focus {
+    background: rgba(168, 123, 98, 0.8); }
+  .login__submit:active {
+    opacity: 0.5; }
 
 .login__signup {
   font-weight: 500;
@@ -2907,3 +2964,8 @@ input:checked + .filter__checkbox-label:active::before {
     @media (max-width: 1023px) {
       .login__signup a {
         margin-right: 0; } }
+    .login__signup a:hover, .login__signup a:focus {
+      color: #a87b62;
+      text-decoration: underline; }
+    .login__signup a:active {
+      opacity: 0.5; }

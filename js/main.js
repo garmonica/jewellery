@@ -4,6 +4,15 @@ const menu = document.querySelector('.menu');
 const login = document.querySelector('.login');
 const loginOpen = document.querySelector('.menu__usernav-link--login');
 
+const mySwiper = document.querySelector('.swiper');
+
+const accordion = document.querySelector('.questions__list');
+
+const filter = document.querySelector('.filter');
+
+const overlay = document.createElement('div');
+overlay.classList.add('overlay');
+
 if (menu) {
   const menuToggle = menu.querySelector('button');
   const body = document.querySelector('body');
@@ -28,8 +37,6 @@ if (menu) {
 
   loginOpen.addEventListener('click', () => closeMenu());
 }
-
-const mySwiper = document.querySelector('.swiper');
 
 if (mySwiper) {
   const slider = document.querySelector('.slider');
@@ -74,8 +81,6 @@ if (mySwiper) {
   });
 }
 
-const accordion = document.querySelector('.questions__list');
-
 if (accordion) {
   accordion.classList.remove('questions__list--nojs');
   const accordionItems = accordion.querySelectorAll('.questions__item');
@@ -88,11 +93,6 @@ if (accordion) {
     evt.target.parentNode.classList.toggle('questions__item--closed');
   });
 }
-
-const filter = document.querySelector('.filter');
-const overlay = document.createElement('div');
-overlay.classList.add('overlay');
-
 
 if (filter) {
   filter.classList.remove('filter--nojs');
@@ -147,6 +147,19 @@ if (login) {
   const loginEmail = login.querySelector('input[type="email"]');
   const loginPassword = login.querySelector('input[type="password"]');
 
+  let isStorageSupport = true;
+  let storageEmail = '';
+
+  try {
+    storageEmail = localStorage.getItem('user-email');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  if (storageEmail) {
+    loginEmail.value = storageEmail;
+  }
+
   const openLogin = () => {
     login.classList.add('login--show');
     document.body.appendChild(overlay);
@@ -186,5 +199,9 @@ if (login) {
   loginForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
     closeLogin();
+
+    if (isStorageSupport) {
+      localStorage.setItem('user-email', loginEmail.value);
+    }
   });
 }
