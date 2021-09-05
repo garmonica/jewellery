@@ -2128,6 +2128,7 @@ a {
     .subscription__wrapper:hover input::placeholder, .subscription__wrapper:focus-within input::placeholder {
       color: #a87b62; }
   .subscription__wrapper button {
+    min-width: 120px;
     margin-bottom: -1px;
     padding: 10px 0 10px 10px;
     background: transparent;
