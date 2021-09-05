@@ -141,7 +141,7 @@
     border: none;
     background: transparent;
     border-bottom: 1px solid $basic-dark;
-    border-radius: none;
+    border-radius: 0;
     outline: none;
 
     @media (max-width: $mobile-width) {
