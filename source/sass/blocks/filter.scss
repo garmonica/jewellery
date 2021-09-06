@@ -405,6 +405,7 @@ input:checked + .filter__checkbox-label:active::before {
     background: transparent;
     border: none;
     outline: none;
+    appearance: textfield;
 
     @media (max-width: $tablet-width) {
       font-size: 16px;

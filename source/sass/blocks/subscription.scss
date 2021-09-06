@@ -16,11 +16,15 @@
 
   p {
     @include offset;
-    margin-bottom: 35px;
+    margin-bottom: 31px;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     color: $dark-grey;
+
+    @media (max-width: $mobile-width) {
+      margin-bottom: 35px;
+    }
   }
 }
 
@@ -37,10 +41,15 @@
     background: transparent;
     border: none;
     outline: none;
+
+    @media (max-width: $mobile-width) {
+      max-width: 160px;
+    }
   }
 
   input::placeholder {
     color: $dark-grey;
+    opacity: 1;
   }
 
   &:hover,
@@ -64,7 +73,7 @@
     cursor: pointer;
     outline: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
     &:hover,

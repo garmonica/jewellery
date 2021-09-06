@@ -2,20 +2,21 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-left: -30px;
 }
 
 .products__item {
   text-align: center;
-  width: calc(100% / 3 - 60px / 3);
+  width: calc(100% / 3 - 30px);
   margin-bottom: 21px;
+  margin-left: 30px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 22px;
   }
 
   @media (max-width: $mobile-width) {
-    width: calc(100% / 2 - 30px / 2);
+    width: calc(100% / 2 - 30px);
     margin-bottom: 10px;
   }
 
@@ -26,14 +27,16 @@
     outline: none;
   }
 
-  a:hover,
-  a:focus {
-    box-shadow: 0 6px 12px rgba($dark-grey, 0.5);
-    color: $basic-brown;
-  }
+  @media (min-width: $desktop-width-only) {
+    a:hover,
+    a:focus {
+      box-shadow: 0 6px 12px rgba($dark-grey, 0.5);
+      color: $basic-brown;
+    }
 
-  a:active {
-    opacity: 0.5;
+    a:active {
+      opacity: 0.5;
+    }
   }
 
   h3 {
