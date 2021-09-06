@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  padding: 24px;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  border: none;
+  cursor: pointer;
+  color: $basic-white;
+  background: $basic-brown;
+
+  &:hover,
+  &:focus {
+    background: rgba($basic-brown, 0.8);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

@@ -99,88 +99,90 @@
         <div class="filter__form-wrapper">
           <button class="filter__close" type="button" aria-label="Close filter"></button>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <div class="filter__field">
-              <h3 class="filter__heading">
-                <button class="filter__field-button" type="button" disabled="">Product</button>
-              </h3>
-              <ul class="filter__content">
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="necklaces" id="product-necklaces" checked="">
-                  <label class="filter__checkbox-label" for="product-necklaces">Necklaces</label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="chokers" id="product-chokers" checked="">
-                  <label class="filter__checkbox-label" for="product-chokers">Chokers</label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="rings" id="product-rings">
-                  <label class="filter__checkbox-label" for="product-rings">Rings</label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="earrings" id="product-earrings" checked="">
-                  <label class="filter__checkbox-label" for="product-earrings">Earrings</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter__field">
-              <h3 class="filter__heading">
-                <button class="filter__field-button" type="button" disabled="">Material</button>
-              </h3>
-              <ul class="filter__content">
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="gold" id="material-gold" checked="">
-                  <label class="filter__checkbox-label" for="material-gold">Gold</label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="silver" id="material-silver" checked="">
-                  <label class="filter__checkbox-label" for="material-silver">Silver</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter__field">
-              <h3 class="filter__heading">
-                <button class="filter__field-button" type="button" disabled="">Collection</button>
-              </h3>
-              <ul class="filter__content">
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="flamingo" id="collection-flamingo" checked="">
-                  <label class="filter__checkbox-label" for="collection-flamingo">Pink flamingo</label>
-                </li>
-                <li>
-                  <input class="visually-hidden" type="checkbox" name="dreams" id="collection-dreams" checked="">
-                  <label class="filter__checkbox-label" for="collection-dreams">Dreams</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filter__field">
-              <h3 class="filter__heading">
-                <button class="filter__field-button" type="button" disabled="">Price</button>
-              </h3>
-              <div class="filter__content">
-                <div class="filter__range">
-                  <div class="filter__scale">
-                    <div class="filter__bar"></div>
-                  </div>
-                  <div class="filter__price-wrapper filter__price-wrapper--min">
-                    <button class="filter__toggle" type="button" aria-label="Lowest price"></button>
-                    <div class="filter__price-output">
-                      <label class="visually-hidden" for="lowest-price">Lowest price</label>
-                      $&nbsp;<input id="lowest-price" type="number" value="55">
+            <div class="accordion">
+              <div class="filter__field">
+                <h3 class="filter__heading">
+                  <button class="filter__field-button accordion__button" type="button" disabled="">Product</button>
+                </h3>
+                <ul class="filter__content">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="necklaces" id="product-necklaces" checked="">
+                    <label class="filter__checkbox-label" for="product-necklaces">Necklaces</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="chokers" id="product-chokers" checked="">
+                    <label class="filter__checkbox-label" for="product-chokers">Chokers</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="rings" id="product-rings">
+                    <label class="filter__checkbox-label" for="product-rings">Rings</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="earrings" id="product-earrings" checked="">
+                    <label class="filter__checkbox-label" for="product-earrings">Earrings</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter__field">
+                <h3 class="filter__heading">
+                  <button class="filter__field-button accordion__button" type="button" disabled="">Material</button>
+                </h3>
+                <ul class="filter__content">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="gold" id="material-gold" checked="">
+                    <label class="filter__checkbox-label" for="material-gold">Gold</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="silver" id="material-silver" checked="">
+                    <label class="filter__checkbox-label" for="material-silver">Silver</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter__field">
+                <h3 class="filter__heading">
+                  <button class="filter__field-button accordion__button" type="button" disabled="">Collection</button>
+                </h3>
+                <ul class="filter__content">
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="flamingo" id="collection-flamingo" checked="">
+                    <label class="filter__checkbox-label" for="collection-flamingo">Pink flamingo</label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden" type="checkbox" name="dreams" id="collection-dreams" checked="">
+                    <label class="filter__checkbox-label" for="collection-dreams">Dreams</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="filter__field">
+                <h3 class="filter__heading">
+                  <button class="filter__field-button accordion__button" type="button" disabled="">Price</button>
+                </h3>
+                <div class="filter__content">
+                  <div class="filter__range">
+                    <div class="filter__scale">
+                      <div class="filter__bar"></div>
                     </div>
-                  </div>
-                  <div class="filter__price-wrapper filter__price-wrapper--max">
-                    <button class="filter__toggle" type="button" aria-label="Highest price"></button>
-                    <div class="filter__price-output">
-                      <label class="visually-hidden" for="highest-price">Highest price</label>
-                      $&nbsp;<input id="highest-price" type="number" value="155">
+                    <div class="filter__price-wrapper filter__price-wrapper--min">
+                      <button class="filter__toggle" type="button" aria-label="Lowest price"></button>
+                      <div class="filter__price-output">
+                        <label class="visually-hidden" for="lowest-price">Lowest price</label>
+                        $&nbsp;<input id="lowest-price" type="number" value="55">
+                      </div>
+                    </div>
+                    <div class="filter__price-wrapper filter__price-wrapper--max">
+                      <button class="filter__toggle" type="button" aria-label="Highest price"></button>
+                      <div class="filter__price-output">
+                        <label class="visually-hidden" for="highest-price">Highest price</label>
+                        $&nbsp;<input id="highest-price" type="number" value="155">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="filter__form-buttons">
-              <button class="filter__submit" type="submit">Apply</button>
-              <button class="filter__clear" type="reset">Clear All</button>
+              <button class="button filter__submit" type="submit">Apply</button>
+              <button class="button filter__clear" type="reset">Clear All</button>
             </div>
           </form>
         </div>
@@ -456,7 +458,7 @@
         <input id="login-password" type="password" placeholder="Password" required="">
       </div>
       <a class="login__forgot-password" href="#">Forgot your password?</a>
-      <button class="login__submit" type="submit">Log In</button>
+      <button class="button login__submit" type="submit">Log In</button>
       <div class="login__signup">
         <span>Don't have an account?</span>
         <a href="#">Sign up</a>

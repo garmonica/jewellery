@@ -44,20 +44,9 @@
   }
 
   button {
-    display: block;
-    width: 100%;
     padding: 42px 115px 9px 42px;
-    font-family: inherit;
-    font-weight: 500;
     font-size: 18px;
     line-height: 23px;
-    color: inherit;
-    text-align: left;
-    background: transparent;
-    border: none;
-    position: relative;
-    cursor: pointer;
-    outline: none;
 
     @media (max-width: $tablet-width) {
       padding: 43px 115px 26px 49px;
@@ -70,52 +59,25 @@
     }
 
     &::after {
-      content: "";
-      position: absolute;
       top: 52px;
       right: 51px;
-      width: 11px;
-      height: 11px;
-      border-left: 1px solid $basic-brown;
-      border-bottom: 1px solid $basic-brown;
-      transform: rotate(135deg);
 
       @media (max-width: $tablet-width) {
-        width: 17px;
-        height: 17px;
         top: 51px;
         right: 52px;
       }
 
       @media (max-width: $mobile-width) {
-        width: 14px;
-        height: 14px;
         top: 26px;
         right: 27px;
       }
     }
 
     @media (min-width: $desktop-width-only) {
-      &:hover,
-      &:focus {
-        color: $basic-brown;
-      }
-
       &:hover::after,
       &:focus::after {
-        border-color: $basic-dark;
         animation: arrow-animation-opened 1.5s linear infinite;
       }
-
-      &:active {
-        opacity: 0.5;
-      }
-    }
-
-    &:disabled {
-      cursor: default;
-      color: inherit;
-      opacity: 1;
     }
   }
 

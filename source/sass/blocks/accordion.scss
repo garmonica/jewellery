@@ -1,0 +1,55 @@
+.accordion__button {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-weight: 500;
+  text-align: left;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-left: 1px solid $basic-brown;
+    border-bottom: 1px solid $basic-brown;
+    transform: rotate(135deg);
+
+    @media (max-width: $tablet-width) {
+      width: 17px;
+      height: 17px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @media (min-width: $desktop-width-only) {
+    &:hover,
+    &:focus {
+      color: $basic-brown;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      border-color: $basic-dark;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &:disabled {
+    cursor: default;
+    color: inherit;
+    opacity: 1;
+  }
+}

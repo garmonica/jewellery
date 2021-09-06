@@ -143,21 +143,10 @@
 }
 
 .filter__field-button {
-  display: block;
-  width: 100%;
   height: 100%;
   padding: 23px 25px 22px;
-  background: transparent;
-  border: none;
-  font-family: inherit;
-  font-weight: 500;
   font-size: 16px;
   line-height: 21px;
-  text-align: left;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  color: inherit;
 
   @media (max-width: $tablet-width) {
     padding: 34px 40px 18px;
@@ -170,48 +159,18 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
     top: 31px;
     right: 26px;
-    width: 11px;
-    height: 11px;
-    border-left: 1px solid $basic-brown;
-    border-bottom: 1px solid $basic-brown;
-    transform: rotate(135deg);
 
     @media (max-width: $tablet-width) {
-      width: 17px;
-      height: 17px;
       top: 43px;
       right: 43px;
     }
 
     @media (max-width: $mobile-width) {
-      width: 14px;
-      height: 14px;
       top: 33px;
       right: 23px;
     }
-  }
-
-  &:hover,
-  &:focus {
-    color: $basic-brown;
-
-    &::after {
-      border-color: $basic-dark;
-    }
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-
-  &:disabled {
-    color: inherit;
-    cursor: default;
-    opacity: 1;
   }
 }
 
@@ -433,28 +392,7 @@ input:checked + .filter__checkbox-label:active::before {
 
 .filter__submit,
 .filter__clear {
-  width: 100%;
   padding: 24px 24px 22px;
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  border: none;
-  cursor: pointer;
-}
-
-.filter__submit {
-  color: $basic-white;
-  background: $basic-brown;
-
-  &:hover,
-  &:focus {
-    background: rgba($basic-brown, 0.8);
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
 }
 
 .filter__clear {
@@ -469,6 +407,7 @@ input:checked + .filter__checkbox-label:active::before {
 
   &:hover,
   &:focus {
+    background: $basic-white;
     color: $basic-brown;
   }
 
