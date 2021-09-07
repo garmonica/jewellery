@@ -403,7 +403,7 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="subscription__wrapper">
             <label class="visually-hidden" for="email-field">Enter your email for newsletter subscription</label>
-            <input id="email-field" type="email" placeholder="Your E-mail" required="">
+            <input id="email-field" type="email" name="subscription-email" placeholder="Your E-mail" required="">
             <button type="submit">Sign Up
               <svg width="30" height="11">
                 <use xlink:href="img/sprite.svg#icon-arrow"></use>
@@ -485,11 +485,11 @@
     <form action="https://echo.htmlacademy.ru" method="post">
       <div class="login__field login__field--email">
         <label class="visually-hidden" for="login-email">Enter your e-mail</label>
-        <input id="login-email" type="email" placeholder="Your E-mail" required="">
+        <input id="login-email" type="email" name="login-email" placeholder="Your E-mail" required="">
       </div>
       <div class="login__field">
         <label class="visually-hidden" for="login-password">Enter your password</label>
-        <input id="login-password" type="password" placeholder="Password" required="">
+        <input id="login-password" type="password" name="login-password" placeholder="Password" required="">
       </div>
       <a class="login__forgot-password" href="#">Forgot your password?</a>
       <button class="button login__submit" type="submit">Log In</button>

@@ -116,7 +116,7 @@ if (filter) {
   const filterOpen = filter.querySelector('.filter__open');
   const filterBlock = filter.querySelector('.filter__form-wrapper');
   const filterClose = filter.querySelector('.filter__close');
-  const form = filter.querySelector('form');
+  const filterForm = filter.querySelector('form');
 
   const openFilter = () => {
     filterBlock.classList.add('filter__form-wrapper--opened');
@@ -141,8 +141,7 @@ if (filter) {
     }
   });
 
-  form.addEventListener('submit', (evt) => {
-    evt.preventDefault();
+  filterForm.addEventListener('submit', () => {
     closeFilter();
   });
 }
@@ -202,8 +201,7 @@ if (login) {
     }
   });
 
-  loginForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
+  loginForm.addEventListener('submit', () => {
     closeLogin();
 
     if (isStorageSupport) {
