@@ -3,6 +3,104 @@
   overflow: hidden;
 }
 
+.page-main__slogan {
+  padding: 45px;
+  background: $dark-brown url("../img/bg-main-desktop.jpg") no-repeat center / cover;
+  min-height: 463px;
+  font-family: "Cormorant Garamond", "Garamond", serif;
+  color: $basic-white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-main-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bg-main-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-main-mobile.jpg");
+    padding: 15px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main-mobile@2x.jpg");
+    }
+  }
+
+  h1 {
+    @include offset;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media (max-width: $mobile-width) {
+      font-size: 38px;
+      line-height: 44px;
+    }
+  }
+
+  p {
+    @include offset;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 43px;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+      font-size: 34px;
+      line-height: 36px;
+    }
+  }
+}
+
+.page-main__slogan--catalog {
+  min-height: 261px;
+  background: $dark-brown url("../img/bg-catalog-desktop.jpg") no-repeat center / cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-catalog-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bg-catalog-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-catalog-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-catalog-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-catalog-mobile@2x.jpg");
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
 .page-main__catalog-wrapper {
   padding-top: 80px;
   padding-bottom: 39px;
