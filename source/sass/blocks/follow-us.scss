@@ -15,14 +15,14 @@
   img {
     display: block;
     margin-bottom: 34px;
-    width: 100%;
-    height: auto;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 20px;
     }
 
     @media (max-width: $mobile-width) {
+      width: 100%;
+      height: auto;
       margin-bottom: 27px;
     }
   }
