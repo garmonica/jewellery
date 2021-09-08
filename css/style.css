@@ -1440,51 +1440,46 @@ a {
   padding: 0;
   list-style: none; }
 
-.slider__item {
+.slider__item a {
+  color: inherit;
+  display: block;
+  height: 100%;
+  outline: none; }
+  @media (min-width: 1024px) {
+    .slider__item a:hover, .slider__item a:focus {
+      -webkit-box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
+              box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
+      color: #a87b62; }
+    .slider__item a:active {
+      opacity: 0.5; } }
+
+.slider__item img {
+  display: block;
+  width: 100%;
   height: auto; }
-  .slider__item a {
-    color: inherit;
-    display: block;
-    height: 100%;
-    outline: none; }
-    @media (min-width: 1024px) {
-      .slider__item a:hover, .slider__item a:focus {
-        -webkit-box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
-                box-shadow: 0 6px 12px rgba(155, 153, 151, 0.5);
-        color: #a87b62; }
-      .slider__item a:active {
-        opacity: 0.5; } }
-  .slider__item img {
-    display: block;
-    width: 100%;
-    height: auto; }
-  .slider__item h3 {
-    margin: 0;
-    padding: 0;
-    margin: 21px 0 7px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px; }
-    @media (max-width: 767px) {
-      .slider__item h3 {
-        margin: 14px 0 7px; } }
-  .slider__item p {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 15px;
-    font-weight: 700; }
+
+.slider__item h3 {
+  margin: 0;
+  padding: 0;
+  margin: 21px 0 7px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px; }
+  @media (max-width: 767px) {
+    .slider__item h3 {
+      margin: 14px 0 7px; } }
+
+.slider__item p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  font-weight: 700; }
 
 .slider--nojs .slider__list {
   overflow-x: auto; }
 
 .slider--nojs .slider__item {
-  width: calc(100% / 4 - 90px / 4);
   margin-right: 30px; }
-  @media (max-width: 1023px) {
-    .slider--nojs .slider__item {
-      width: calc(100% / 2 - 30px / 2); } }
-  .slider--nojs .slider__item:last-child {
-    margin-right: 0; }
 
 .slider--nojs .slider__button {
   display: none; }
