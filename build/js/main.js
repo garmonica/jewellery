@@ -4,7 +4,7 @@ const menu = document.querySelector('.menu');
 const login = document.querySelector('.login');
 const loginOpen = document.querySelector('.menu__usernav-link--login');
 
-const mySwiper = document.querySelector('.swiper');
+const mySwiper = document.querySelector('.swiper-container');
 
 const accordion = document.querySelector('.questions__list');
 
