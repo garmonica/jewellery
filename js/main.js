@@ -56,6 +56,8 @@ if (mySwiper) {
         return `<span class="${className}">${index + 1}</span>`;
       },
     },
+    slidesPerView: 4,
+    slidesPerGroup: 4,
     breakpoints: {
       1024: {
         slidesPerView: 4,
