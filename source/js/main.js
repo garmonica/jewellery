@@ -42,7 +42,7 @@ if (mySwiper) {
   const slider = document.querySelector('.slider');
   slider.classList.remove('slider--nojs');
 
-  new Swiper(mySwiper, {
+  new Swiper('.swiper-container', {
     mousewheel: true,
     spaceBetween: 30,
     navigation: {
