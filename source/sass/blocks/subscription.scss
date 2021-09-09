@@ -41,10 +41,6 @@
     background: transparent;
     border: none;
     outline: none;
-
-    @media (max-width: $mobile-width) {
-      max-width: 160px;
-    }
   }
 
   input::placeholder {

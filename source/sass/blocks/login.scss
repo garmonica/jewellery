@@ -176,22 +176,27 @@
 }
 
 .login__forgot-password {
-  display: block;
-  padding: 5px 1px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-  color: $dark-grey;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
 
-  &:hover,
-  &:focus {
-    color: $basic-dark;
-    text-decoration: underline;
-  }
+  a {
+    display: block;
+    padding: 5px 1px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark-grey;
+    text-align: right;
 
-  &:active {
-    opacity: 0.5;
+    &:hover,
+    &:focus {
+      color: $basic-dark;
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
 
