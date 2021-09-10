@@ -40,12 +40,9 @@ const slider = document.querySelector('.slider');
 slider.classList.remove('slider--nojs');
 
 new Swiper('.swiper-container', {
-  mousewheel: true,
+  direction: 'horizontal',
+  loop: false,
   spaceBetween: 30,
-  navigation: {
-    prevEl: '.swiper-button-custom-prev',
-    nextEl: '.swiper-button-custom-next',
-  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -53,30 +50,34 @@ new Swiper('.swiper-container', {
       return `<span class="${className}">${index + 1}</span>`;
     },
   },
+  navigation: {
+    prevEl: '.swiper-button-custom-prev',
+    nextEl: '.swiper-button-custom-next',
+  },
   slidesPerView: 4,
   slidesPerGroup: 4,
-  breakpoints: {
-    1024: {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-    },
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-    },
-    320: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-          return `${current} of ${total}`;
-        },
-      },
-    },
-  },
+  // breakpoints: {
+  //   1024: {
+  //     slidesPerView: 4,
+  //     slidesPerGroup: 4,
+  //   },
+  //   768: {
+  //     slidesPerView: 2,
+  //     slidesPerGroup: 2,
+  //   },
+  //   320: {
+  //     slidesPerView: 2,
+  //     slidesPerGroup: 2,
+  //     pagination: {
+  //       el: '.swiper-pagination',
+  //       clickable: true,
+  //       type: 'custom',
+  //       renderCustom: function (swiper, current, total) {
+  //         return `${current} of ${total}`;
+  //       },
+  //     },
+  //   },
+  // },
 });
 
 if (accordion) {
