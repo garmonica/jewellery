@@ -1474,8 +1474,10 @@ a {
     padding-bottom: 15px;
     font-weight: 700; }
 
-.slider--nojs .slider__list {
-  overflow-x: auto; }
+.slider--nojs .slider__wrapper {
+  overflow-x: auto;
+  padding: 15px 0 20px;
+  margin: -15px 0; }
 
 .slider--nojs .slider__item {
   width: calc(100% / 4 - 90px / 4);
@@ -1483,8 +1485,6 @@ a {
   @media (max-width: 1023px) {
     .slider--nojs .slider__item {
       width: calc(100% / 2 - 30px / 2); } }
-  .slider--nojs .slider__item:last-child {
-    margin-right: 0; }
 
 .slider--nojs .slider__button {
   display: none; }
